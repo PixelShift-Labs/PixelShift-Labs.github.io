@@ -1,0 +1,51 @@
+:root {
+  --primary: #211C66;
+  --ink: #1d1d22;
+  --muted: #6b6b78;
+  --line: #e6e6ee;
+  --bg: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: #f5f5f8; color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
+    "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7; -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 32px 28px; }
+h1 { font-size: 1.6rem; color: var(--primary); margin: 0 0 4px; letter-spacing: -0.01em; }
+.lead { color: var(--muted); font-size: 0.95rem; margin: 0 0 28px; }
+h2 { font-size: 1.12rem; color: var(--primary); margin: 32px 0 10px; padding-top: 8px; border-top: 1px solid var(--line); letter-spacing: -0.01em; }
+h2:first-of-type { border-top: 0; padding-top: 0; }
+p, li { font-size: 0.96rem; }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9rem; }
+th, td { border: 1px solid var(--line); padding: 9px 11px; text-align: left; vertical-align: top; }
+th { background: #f4f4fa; color: var(--primary); white-space: nowrap; }
+a { color: var(--primary); word-break: break-all; }
+strong { color: var(--ink); }
+.meta { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+code { background: #f0f0f6; padding: 1px 5px; border-radius: 5px; font-size: 0.88em; }
+
+/* ── 목록(메뉴) 페이지 및 페이지 간 이동용 추가 스타일 ── */
+.back {
+  display: inline-block; margin-bottom: 20px; font-size: 0.9rem;
+  color: var(--muted); text-decoration: none; word-break: keep-all;
+}
+.back:hover { color: var(--primary); }
+
+.app-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.app-list li { margin: 10px 0; }
+.app-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px;
+  text-decoration: none; color: var(--ink); transition: border-color .15s, background .15s, transform .05s;
+}
+.app-item:hover { border-color: var(--primary); background: #fafaff; }
+.app-item:active { transform: scale(0.997); }
+.app-item .name { font-weight: 600; color: var(--primary); font-size: 1.02rem; }
+.app-item .desc { color: var(--muted); font-size: 0.86rem; margin-top: 2px; word-break: keep-all; }
+.app-item .arrow { color: var(--muted); font-size: 1.1rem; flex: 0 0 auto; }
+.app-item:hover .arrow { color: var(--primary); }
