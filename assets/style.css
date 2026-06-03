@@ -49,3 +49,41 @@ code { background: #f0f0f6; padding: 1px 5px; border-radius: 5px; font-size: 0.8
 .app-item .desc { color: var(--muted); font-size: 0.86rem; margin-top: 2px; word-break: keep-all; }
 .app-item .arrow { color: var(--muted); font-size: 1.1rem; flex: 0 0 auto; }
 .app-item:hover .arrow { color: var(--primary); }
+
+/* ── 회사 소개 홈(랜딩) 전용 스타일 ── */
+/* 아래 클래스들은 index.html(회사 소개 홈)에서만 사용하며, 정책 페이지에는 영향을 주지 않습니다. */
+.hero + .card, .card + .card { margin-top: 20px; }
+
+.hero { text-align: center; padding: 44px 24px 36px; }
+.brand-mark {
+  width: 64px; height: 64px; margin: 0 auto 18px; padding: 15px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2b2585, #6b5fd6);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+  box-shadow: 0 14px 30px rgba(33, 28, 102, .30);
+}
+.brand-mark span { display: block; background: rgba(255, 255, 255, .95); border-radius: 3px; }
+.brand-mark span:nth-child(2) { transform: translate(3px, -3px); background: rgba(255, 255, 255, .55); }
+.brand-mark span:nth-child(3) { background: rgba(255, 255, 255, .78); }
+.hero h1 { font-size: 2.2rem; margin: 0 0 10px; letter-spacing: -0.02em; }
+.hero .tagline { color: var(--ink); font-size: 1.08rem; font-weight: 600; margin: 0; word-break: keep-all; }
+.hero .sub { color: var(--muted); font-size: 0.95rem; margin: 10px auto 0; max-width: 460px; word-break: keep-all; }
+
+.about { font-size: 1rem; color: var(--ink); margin: 0; word-break: keep-all; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
+.feature { border: 1px solid var(--line); border-radius: 12px; padding: 18px 16px; background: #fafaff; }
+.feature .ico { font-size: 1.5rem; line-height: 1; }
+.feature h3 { margin: 10px 0 4px; font-size: 1rem; color: var(--primary); letter-spacing: -0.01em; }
+.feature p { margin: 0; font-size: 0.88rem; color: var(--muted); word-break: keep-all; }
+
+.apps-head h2 { margin: 0 0 4px; border-top: 0; padding-top: 0; }
+.apps-head p { margin: 0 0 6px; color: var(--muted); font-size: 0.9rem; word-break: keep-all; }
+
+.site-foot { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 26px 8px 8px; word-break: keep-all; }
+.site-foot a { color: var(--primary); }
+
+@media (max-width: 560px) {
+  .features { grid-template-columns: 1fr; }
+  .hero { padding: 36px 16px 28px; }
+  .hero h1 { font-size: 1.9rem; }
+}
